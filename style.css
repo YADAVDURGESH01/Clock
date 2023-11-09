@@ -1,0 +1,137 @@
+body {
+    background:aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .clock {
+    width: 240px;
+    height: 240px;
+    background: transparent;
+    border-radius: 60%;
+    border: 5px solid black;
+    position: relative;
+	  background-color:#191919;
+  }
+  .clock:hover {
+    background-color:#33401a;
+    transition: all 1.1s;
+}
+  
+  .clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.8rem;
+  }
+  
+  .clock .number1 {
+    --rotation: 30deg;
+	 color:red;	
+  }
+  .clock .number2 {
+    --rotation: 60deg;
+	color:red;	
+  }
+  .clock .number3 {
+    --rotation: 90deg;
+	color:red;	
+  }
+  .clock .number4 {
+    --rotation: 120deg;
+	color:red;	
+  }
+  .clock .number5 {
+    --rotation: 150deg;
+	color:red;	
+  }
+  .clock .number6 {
+    --rotation: 180deg;
+	color:red;	
+  }
+  .clock .number7 {
+    --rotation: 210deg;
+	color:red;	
+  }
+  .clock .number8 {
+    --rotation: 240deg;
+	color:red;	
+  }
+  .clock .number9 {
+    --rotation: 270deg;
+	color:red;	
+  }
+  .clock .number10 {
+    --rotation: 300deg;
+	color:red;	
+  }
+  .clock .number11 {
+    --rotation: 330deg;
+	color:red;	
+  }
+   .clock .number12 {
+    --rotation: 360deg;
+	color:red;	
+  }
+  
+  .clock .hand {
+	 	
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  }
+  
+  .clock::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  
+  .clock .hand.second {
+    width: 3px;
+    height: 45%;
+    background-color: red;
+  }
+  
+  .clock .hand.minute {
+    width: 7px;
+    height: 40%;
+    background-color: white;
+  }
+  
+  .clock .hand.hour {
+    width: 10px;
+    height: 30%;
+    background-color:white;
+  }
+  .faded{
+    user-select:none;
+    font-size: 125%;
+    color:rgb(231,231,231); 
+    position: absolute;
+    bottom:28%;
+    left: 38%;
+    font-weight: all 3s;
+}
+
+  
