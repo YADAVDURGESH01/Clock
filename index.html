@@ -1,34 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Clock</title>
-  </head>
-  <body>
-    <div class="wrapper">
-      <!-- <p style="text-align: center;">Touch the watch Durgesh</p> -->
-    <div class="clock">
-      <div class="faded">Durgesh</div>
-      <div class="hand hour" data-hour-hand></div>
-      <div class="hand minute" data-minute-hand></div>
-      <div class="hand second" data-second-hand></div>
-      <div class="number number1">I</div>
-      <div class="number number2">II</div>
-      <div class="number number3">III</div>
-      <div class="number number4">IV</div>
-      <div class="number number5">V</div>
-      <div class="number number6">VI</div>
-      <div class="number number7">VII</div>
-      <div class="number number8">VIII</div>
-      <div class="number number9">IX</div>
-      <div class="number number10">X</div>
-      <div class="number number11">XI</div>
-      <div class="number number12">XII</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .contact-container {
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      max-width: 900px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+
+    .contact-info, .contact-form {
+      flex: 1;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .contact-info {
+      background: #6a11cb;
+      background: linear-gradient(to bottom, #6a11cb, #2575fc);
+      color: white;
+    }
+
+    .contact-info h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .contact-info .info-item {
+      margin: 20px 0;
+    }
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      background-color: #6a11cb;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #5011a6;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>Let's Connect</h2>
+      <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+      
+      <div class="info-item">
+        <strong>Email:</strong>
+        <p>your.email@example.com</p>
+      </div>
+
+      <div class="info-item">
+        <strong>Phone:</strong>
+        <p>+91-12345-67890</p>
+      </div>
+
+      <div class="info-item">
+        <strong>Location:</strong>
+        <p>Delhi, India</p>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="5dc10972-101c-4e2d-aba9-ba96f93bd0f9">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
     </div>
   </div>
-    <script src="main.js"></script>
-  </body>
+
+</body>
 </html>
